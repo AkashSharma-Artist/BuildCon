@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Starts the HTML document; lang="en" specifies the page is in English. -->
+<head>
+    <meta charset="UTF-8">
+    <!-- What: Sets character encoding to UTF-8 (includes most characters in all languages).
+
+Why: Prevents weird characters from showing up (like �).
+
+How: Tells browser how to read symbols/text. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures responsive design on all devices. -->
+    <title>BUILD CON</title>
+
+    <!-- All CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      
+      <!-- <nav>: Semantic HTML5 tag for navigation bars.
+
+        navbar: Core Bootstrap class to activate navbar styling.
+        
+        navbar-expand-lg: Navbar expands horizontally at the lg (large) breakpoint. On smaller screens, it collapses into a hamburger menu.
+        
+        navbar-light: Applies a light theme — light text on light background.
+        
+        bg-light: Gives a light background color to the navbar.
+        
+        fixed-top: Fixes the navbar to the top of the page, even when scrolling.
+        
+        📌 Purpose: Creates a fully responsive, sticky navbar with a clean look. -->
+
+        <div class="container">
+
+          <!-- container: Bootstrap class that centers content and adds horizontal padding.
+
+          Responsive: Keeps navbar items aligned with the page layout.
+          
+          📌 Purpose: Keeps navbar content centered and spaced well across screen sizes. -->
+
+          <a class="navbar-brand" href="#"><span class="text-warning">Build</span>Con</a>
+
+          <!-- <a>: Anchor tag used as the logo or brand name.
+
+            navbar-brand: Bootstrap class that styles this link as a brand/logo in the navbar.
+            
+            href="#": Clicking this will scroll to the top (can be changed to homepage link).
+            
+            <span class="text-warning">Build</span>: Wraps "Build" with Bootstrap’s yellow text color.
+            
+            text-warning: One of Bootstrap’s text color utility classes.
+            
+            The word "Con" stays normal (inherits navbar color).
+            
+            📌 Purpose: Displays the brand/logo in a stylized way — part colored, part default. -->
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- <button>: Controls the collapsing behavior for small screens.
+
+            navbar-toggler: Bootstrap class that styles it like a hamburger icon.
+            
+            type="button": Makes it a clickable button.
+            
+            data-bs-toggle="collapse": Tells Bootstrap to collapse/expand a section.
+            
+            data-bs-target="#navbarSupportedContent": Links this button to the collapsible content below.
+            
+            aria-controls="navbarSupportedContent": For accessibility – tells screen readers what it controls.
+            
+            aria-expanded="false": Initial state – not expanded.
+            
+            aria-label="Toggle navigation": Helps screen readers describe this button.
+            
+            <span class="navbar-toggler-icon">: Renders the actual hamburger icon (provided by Bootstrap CSS).
+            
+            📌 Purpose: Handles responsive behavior — shows menu when clicked on mobile. -->
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- collapse: Enables Bootstrap’s collapse functionality.
+
+            navbar-collapse: Styles the collapsed content to look like a nav menu. -->
+
+            <!-- target krega ki kisme jakrr vo band hoga means ki yeh kaun se hamburger me jayega tbho toh id liye hai or button
+            me call hua tha -->
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <!-- navbar-nav: Styles this <ul> as part of the navbar menu.
+
+                ms-auto: Applies margin-start: auto — pushes the links to the right side.
+                
+                mb-2: Adds margin-bottom on small screens.
+                
+                mb-lg-0: Removes bottom margin on large screens.
+                
+                📌 Purpose: Holds the list of navigation links and positions them properly. -->
+                                
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+
+              <!-- So yeh hai vo jisme nav item ka class bana jisme added hai or uske andrr link ka hai uska nam hai 
+              or # btata hai ki vo agrr clcik ho toh kaun se section prr jayee -->
+
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>        
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!-- ✅ Overall Behavior
+On Large Screens	On Small Screens
+Horizontal nav with brand and links	Collapsed nav with toggle button
+Links aligned to the right (ms-auto)	Menu opens via hamburger icon
+Stays fixed at top	Same behavior – sticky + responsive -->
+
+
+<!-- So before going for carousel pehle fixed top jab kiye nav ko tb uske badd carsoul ko add kiye toh work
+ nhi hua lekin fix hata krr kiye toh hua toh asa someupper niche tha -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- <div>: This is the main container for the carousel.
+
+    id="carouselExampleIndicators": Gives a unique ID so that buttons and controls can target it.
+    
+    class="carousel slide":
+    
+    carousel: Activates Bootstrap carousel behavior.
+    
+    slide: Enables sliding animation between items.
+    
+    data-bs-ride="carousel": Tells Bootstrap to start the carousel automatically on page load.
+    
+    📌 Purpose: Initializes a responsive, auto-playing carousel. -->
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- carousel-indicators: Bootstrap class that creates navigation dots.
+
+  Each <button>:
+  
+  type="button": Makes them clickable.
+  
+  data-bs-target="#carouselExampleIndicators": Tells which carousel to control.
+  
+  data-bs-slide-to="0/1/2": Tells it to go to slide 0, 1, or 2.
+  
+  class="active" (only on the first one): Marks it as selected. means jisko doge vo pehle show hoga
+  
+  aria-label and aria-current: For accessibility (used by screen readers).
+  
+  📌 Purpose: These dots let users jump to any specific slide. -->
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="home-1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption">
+        <h5>Your Dream House</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+            <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
+      </div>
+    </div>
+
+    <!-- carousel-item active:
+
+carousel-item: Denotes a single slide.
+
+active: Makes this the initial visible slide.
+
+<img src="home-1.jpg" ...>:
+
+d-block w-100: Makes the image block-level and full width.
+
+alt="...": Alt text (you should replace it with a real description for accessibility).
+
+carousel-caption:
+
+A semi-transparent box that overlays the image with text content.
+
+Inside caption:
+
+A heading (h5), paragraph, and a button (Learn More) with Bootstrap classes:
+
+btn btn-warning: Yellow button.
+
+mt-3: Adds top margin. -->
+
+📌 Purpose: This is the first slide with an image, some text, and a CTA (Call To Action) button.
+
+    <div class="carousel-item">
+      <img src="home-2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption">
+        <h5>Always Dedicated</h5>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+           <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="home-3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption">
+        <h5>True Construction</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+            <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <!-- carousel-control-prev: Bootstrap class for previous button style.
+
+  data-bs-slide="prev": Moves to the previous slide.
+  
+  span.carousel-control-prev-icon: Adds a left-arrow icon.
+  
+  aria-hidden="true": Hides it from screen readers (since next line gives the label).
+  
+  visually-hidden: For screen readers only — makes carousel accessible. 
+
+  This way, the carousel is: ✅ Keyboard navigable
+✅ Screen-reader friendly
+✅ W3C accessibility compliant
+  
+  📌 Purpose: Lets user navigate to the previous slide manually. -->
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+ <!-- these are for next  -->
+</div>
+
+
+ <!-- about section starts -->
+ <section id="about" class="about section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-md-12 col-12">
+
+            <!-- Creates a column using Bootstrap's grid classes.
+
+            col-lg-4: On large screens (≥992px), this column takes up 4 out of 12 grid spaces (1/3 of the row).
+            
+            col-md-12: On medium screens (≥768px), takes the full width.
+            
+            col-12: On small and extra-small devices, also takes full width.
+            
+            👉 So, on large screens: this is 1/3 width, but on small screens, it stacks above the next column. -->
+
+              <div class="about-img">
+                  <img src="img/about.jpg" alt="" class="img-fluid">
+              </div>
+
+              <!-- so yeh smjh lo ki out of 3, 1 part mila hai img ko or baki 2 mila content ko yani words ko  -->
+          </div>
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+              <div class="about-text">
+                    <h2>We Provide the Best Quality <br/> Services Ever</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, labore reiciendis.
+                         Assumenda eos quod animi! Soluta nesciunt inventore dolores excepturi provident, 
+                         culpa beatae tempora, explicabo corporis quibusdam corrupti. Autem, quaerat.
+                         Assumenda quo aliquam vel, nostrum explicabo ipsum dolor, ipsa perferendis porro doloribus
+                          obcaecati placeat natus iste odio est non earum?</p>
+                    <a href="#" class="btn btn-warning">Learn More</a>
+              </div>
+          </div>
+
+          <!-- This is the second column (text content).
+
+          col-lg-8: On large screens, it takes up 8 columns (2/3 of the row).
+          
+          col-md-12 col-12: On smaller screens, it also takes full width and stacks below the image.
+          
+          ps-lg-5:
+          
+          Bootstrap padding class.
+          
+          ps- stands for padding start (left in LTR languages).
+          
+          ps-lg-5: Adds left padding on large screens.
+          
+          mt-md-5:
+          
+          mt- means margin top.
+          
+          Adds top margin starting from medium screens and below — to give space between image and text when stacked vertically. -->
+
+      </div>
+  </div>
+</section>
+<!-- about section Ends -->
+
+ <!-- services section Starts -->
+ <section class="services section-padding" id="services">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Single full-width column on medium (≥768px) and larger screens. -->
+            <div class="section-header text-center pb-5">
+              <!-- Bootstrap utility class — aligns text to the center.
+              pb-5: Adds padding-bottom (pb) of size 5 (≈3rem). -->
+                  <h2>Our Services</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit. Non, quo.</p>
+              </div>
+          </div>
+      </div>
+       <!-- upper vala buss topic heading dene ka tha -->
+  <!-- niche vala A new Bootstrap row — this will contain 3 columns/cards side by side on large screens and stacked on small ones. -->
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+
+          <!-- This column will behave as:
+
+          col-12: Full width on extra-small screens
+          
+          col-md-12: Full width on medium screens
+          
+          col-lg-4: 1/3 width on large screens (3 cards in a row) -->
+
+            <div class="card text-white text-center bg-dark pb-2">
+
+              <!-- Bootstrap card component: structured container for displaying content.
+
+text-white: Makes text white.
+
+text-center: Center-aligns everything inside.
+
+bg-dark: Gives card a dark background.
+
+pb-2: Adds bottom padding inside the card. -->
+
+                <div class="card-body">
+                    <i class="bi bi-laptop"></i>
+                    <h3 class="card-title">Best Quality</h3>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+                    <!--lead jo use hua hai vo Bootstrap utility class — makes the paragraph slightly larger and more prominent. -->
+                    <button class="btn bg-warning text-dark">Read More</button>
+                </div>
+            </div>
+        </div>
+        
+          <div class="col-12 col-md-12 col-lg-4">
+              <div class="card text-white text-center bg-dark pb-2">
+                  <div class="card-body">
+                    <i class="bi bi-journal"></i>
+                      <h3 class="card-title">Sustainability</h3>
+                      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+                      <button class="btn bg-warning text-dark">Read More</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+              <div class="card text-white text-center bg-dark pb-2">
+                  <div class="card-body">
+                    <i class="bi bi-intersect"></i>
+                      <h3 class="card-title">Integrity</h3>
+                      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+                      <button class="btn bg-warning text-dark">Read More</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- services section Ends -->
+
+ <!-- portfolio strats -->
+ <section id="portfolio" class="portfolio section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="section-header text-center pb-5">
+                  <h2>Our Projects</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit. Non, quo.</p>
+              </div>
+          </div>
+          <!-- yeh sab same hai upper ke heading ka -->
+      </div>
+      <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+              <div class="card text-light text-center bg-white pb-2">
+                  <div class="card-body text-dark">
+                    <div class="img-area mb-4">
+                        <img src="img/project-1.jpg" class="img-fluid" alt="">
+                    </div>
+                      <h3 class="card-title">Building Make</h3>
+                      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+                      <button class="btn bg-warning text-dark">Learn More</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+              <div class="card text-light text-center bg-white pb-2">
+                  <div class="card-body text-dark">
+                    <div class="img-area mb-4">
+                        <img src="img/project-2.jpg" class="img-fluid" alt="">
+                    </div>
+                      <h3 class="card-title">Building Make</h3>
+                      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+                      <button class="btn bg-warning text-dark">learn More</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+              <div class="card text-light text-center bg-white pb-2">
+                  <div class="card-body text-dark">
+                    <div class="img-area mb-4">
+                        <img src="img/project-3.jpg" class="img-fluid" alt="">
+                    </div>
+                      <h3 class="card-title">Building Make</h3>
+                      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+                      <button class="btn bg-warning text-dark">Learn More</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+ <!-- all are same oncce we do the upper part ONLY MAINE KY KIYA CARD jo white the usko maine black krdiya jada acha lgg rha usme -->
+
+<!-- portfolio ends -->
+
+ <!-- team starts -->
+ <section class="team section-padding" id="team">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-header text-center pb-5">
+                <h2>Our Team</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit. Non, quo.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-3">
+          <!-- This is a Bootstrap grid column that adapts responsively:
+
+col-12: On extra-small screens, it takes the full width (100%).
+
+col-md-6: On medium screens (≥768px), it takes half width.
+
+col-lg-3: On large screens (≥992px), it takes ¼ width (allowing 4 cards in a row).
+
+✅ This makes the layout responsive and mobile-friendly. -->
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="img/team-1.jpg" alt="" class="img-fluid rounded-circle">
+                    <!-- 📸 Visually: You’ll see a neat, circle-cropped profile image. -->
+                <h3 class="card-title py-2">Jack Wilson</h3>
+                <!-- card-title: Standard Bootstrap class for card titles.
+
+py-2: Adds vertical padding (top and bottom = 2) to give breathin -->
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi ipsam nostrum illo tempora esse quibusdam.</p>
+                
+
+                <p class="socials">
+                <i class="bi bi-twitter text-dark mx-1"></i>
+                <i class="bi bi-facebook text-dark mx-1"></i>
+                <i class="bi bi-linkedin text-dark mx-1"></i>
+                <i class="bi bi-instagram text-dark mx-1"></i>
+                </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="img/team-2.jpg" alt="" class="img-fluid rounded-circle">
+                <h3 class="card-title py-2">Jack Wilson</h3>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi ipsam nostrum illo tempora esse quibusdam.</p>
+                <p class="socials">
+                    <i class="bi bi-twitter text-dark mx-1"></i>
+                <i class="bi bi-facebook text-dark mx-1"></i>
+                <i class="bi bi-linkedin text-dark mx-1"></i>
+                <i class="bi bi-instagram text-dark mx-1"></i>
+                </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="img/team-3.jpg" alt="" class="img-fluid rounded-circle">
+                <h3 class="card-title py-2">Jack Wilson</h3>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi ipsam nostrum illo tempora esse quibusdam.</p>
+                <p class="socials">
+                    <i class="bi bi-twitter text-dark mx-1"></i>
+                <i class="bi bi-facebook text-dark mx-1"></i>
+                <i class="bi bi-linkedin text-dark mx-1"></i>
+                <i class="bi bi-instagram text-dark mx-1"></i>
+                </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="img/team-4.jpg" alt="" class="img-fluid rounded-circle">
+                <h3 class="card-title py-2">Jack Wilson</h3>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi ipsam nostrum illo tempora esse quibusdam.</p>
+                <p class="socials">
+                    <i class="bi bi-twitter text-dark mx-1"></i>
+                <i class="bi bi-facebook text-dark mx-1"></i>
+                <i class="bi bi-linkedin text-dark mx-1"></i>
+                <i class="bi bi-instagram text-dark mx-1"></i>
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- team ends -->
+
+      <!-- Contact starts main vale me glti se hai iska explaination check krlena-->
+      <section id="contact" class="contact section-padding">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Contact Us</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit. Non, quo.</p>
+                    </div>
+                </div>
+            </div>
+			<div class="row m-0">
+				<div class="col-md-12 p-0 pt-4 pb-4">
+					<form action="#" class="bg-light p-4 m-auto">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control" placeholder="Full Name" required="" type="text">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control" placeholder="Email" required="" type="email">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="mb-3">
+									<textarea class="form-control" placeholder="Message" required="" rows="3"></textarea>
+								</div>
+							</div><button class="btn btn-warning btn-lg btn-block mt-3" type="button">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+      </section>
+      <!-- contact ends -->
+      <!-- footer starts -->
+      <footer class="bg-dark p-2 text-center">
+          <div class="container">
+              <p class="text-white">All Right Reserved By @website Name</p>
+          </div>
+      </footer>
+      <!-- footer ends easy to understand-->
+
+
+        <!-- All Js -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+</html>

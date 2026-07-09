@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+	font-family: 'Montserrat', sans-serif; /*Everything (h1, p, etc.) now uses the Montserrat font, thanks to the universal selector *.*/
+}
+body {
+	background: #f1fbff;
+}
+.section-padding {
+	padding: 100px 0; /*Adds space above and below sections (top and bottom: 100px, left/right: 0).*/
+}
+.carousel-item {
+	height: 100vh;  /*Makes each slide fill the entire screen (100vh).*/
+	min-height: 300px; /*Guarantees a minimum height of 300px on smaller screens.*/
+}
+.carousel-caption {
+	bottom: 220px;  /*Moves caption up from the bottom.*/
+	z-index: 2;  /*agee ayee kuki ek layer hai lga transparent ka khi vo test ko bhi transparent krr skta hai or
+	 ensures it stays above the dark overlay*/
+}
+.carousel-caption h5 {  /*Makes the heading bold, uppercase, spaced, and modern.*/
+	font-size: 45px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 25px;
+}
+.carousel-caption p {
+	width: 60%;  /*Limits width to 60% for better readability*/
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.9;  /*upper or niche space rhega*/
+}
+.carousel-inner:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1;  /*This overlay is pseudo-content added by CSS, not directly in HTML.
+	 It darkens the background image so the white text becomes more readable.*/
+}
+.navbar .getstarted {
+	background: #106eea;
+	margin-left: 30px;
+	border-radius: 4px;
+	font-weight: 400;
+	color: #fff;
+	text-decoration: none;
+	padding: .5rem 1rem;
+	line-height: 2.3;
+}
+.navbar-nav a {
+	font-size: 15px;  /*Uppercase, medium bold links in navbar*/
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.navbar-light .navbar-brand { /*The site name/logo is styled boldly, spaced out, and in uppercase.*/
+	color: #000;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+
+	/* .navbar-light: A Bootstrap class for light-colored navbar themes (light background, dark text).
+
+.navbar-brand: Refers to the branding/logo area in the navbar (usually a company/site name).
+
+:focus: When the element is focused (e.g., via keyboard tabbing).
+
+:hover: When the user hovers over it with a mouse.
+
+color: #000;: Sets the text color to black in both focus and hover states. */
+
+	color: #000;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #000;
+}
+
+.w-100 {
+	height: 100vh; /*Ensures images take full width and full height of the viewport (100vh)*/
+}
+.navbar-toggler {
+	padding: 1px 5px;
+	font-size: 18px;
+	line-height: 0.3;
+	background: #fff;
+}  /*Styles the hamburger icon button (for mobile view)
+
+Keeps it compact and white background for visibility*/
+
+.services .card-body i {
+	font-size: 50px; /*for font size */
+}
+
+.portfolio .card {
+	box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15); /*yeh shadow dega card ke piche ka*/
+}
+.team .card {
+	box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+.services .card-body i {
+	font-size: 50px;  /*jo icon hai uska size hai yeh*/
+}
+.team .card-body i {
+	font-size: 20px; /*yeh social media icons sab ka hai*/
+}
+
+
+
+/* ======  RESONPONSIVE CSS ======*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.carousel-caption {
+		bottom: 370px; /*bottom me height thoda badhaye upper ki orr*/
+	}
+	 .carousel-caption p {
+		width: 100%; /*width diye kuki chota hogya tha */
+	}
+	.card {
+		margin-bottom: 30px;
+	}
+	.img-area img {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+ .navbar-nav {
+	text-align: center;  /*link chote me center me dikhega*/
+ }
+ .carousel-caption {
+	bottom: 125px;  /*niche se 125px ki hgt*/
+ }
+ .carousel-caption h5 {
+	font-size: 17px;  
+ }
+ .carousel-caption a {
+	padding: 10px 15px;
+	font-size: 15px;  /*for button*/
+ }
+ .carousel-caption p {
+	width: 100%; 
+	line-height: 1.6;
+	font-size: 12px;
+ }
+
+}
