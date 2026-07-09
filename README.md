@@ -22,9 +22,9 @@ BuildCon is a fully responsive single-page website designed for a construction c
 - Google Fonts
 
 ## Screenshots
-![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
-![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
-![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
-![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
-![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
+![](https://github.com/AkashSharma-Artist/BuildCon/blob/main/Screenshot%202026-07-09%20162818.png)
+![](https://github.com/AkashSharma-Artist/BuildCon/blob/main/Screenshot%202026-07-09%20162831.png)
+![](https://github.com/AkashSharma-Artist/BuildCon/blob/main/Screenshot%202026-07-09%20162853.png)
+![](https://github.com/AkashSharma-Artist/BuildCon/blob/main/Screenshot%202026-07-09%20162903.png)
+![](https://github.com/AkashSharma-Artist/BuildCon/blob/main/Screenshot%202026-07-09%20162916.png)
 
