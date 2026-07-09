@@ -1,6 +1,6 @@
 # BuildCon – Construction Company Landing Page
 
-![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
+![]([https://github.com/najirh/netflix_sql_project/blob/main/logo.png](https://github.com/AkashSharma-Artist/BuildCon/blob/main/ChatGPT%20Image%20Jul%209%2C%202026%2C%2004_26_59%20PM.png))
 
 ## Overview
 BuildCon is a fully responsive single-page website designed for a construction company, built using HTML5, CSS3, and Bootstrap 5. It showcases a clean, modern layout with smooth navigation and mobile-first responsiveness.
