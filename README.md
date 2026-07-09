@@ -1,2 +1,30 @@
-# BuildCon
-A responsive construction company landing page built with HTML, CSS &amp; Bootstrap 5, featuring a hero carousel, services, portfolio, team and contact sections.
+# BuildCon – Construction Company Landing Page
+
+![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
+
+## Overview
+BuildCon is a fully responsive single-page website designed for a construction company, built using HTML5, CSS3, and Bootstrap 5. It showcases a clean, modern layout with smooth navigation and mobile-first responsiveness.
+
+## Features
+- Hero carousel with call-to-action ("Your Dream House", "Always Dedicated", "True Construction")
+- Sticky navbar with smooth scroll navigation
+- **Services** section highlighting Best Quality, Sustainability, and Integrity
+- **Portfolio** section to showcase completed projects
+- **Team** section with member profiles
+- **Contact** section for client inquiries
+- Fully responsive design (mobile, tablet, desktop breakpoints)
+- Custom styling on top of Bootstrap using Google Fonts (Montserrat)
+
+## Tech Stack
+- HTML5
+- CSS3 (custom styles + media queries)
+- Bootstrap 5
+- Google Fonts
+
+## Screenshots
+![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
+![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
+![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
+![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
+![](https://github.com/najirh/netflix_sql_project/blob/main/logo.png)
+
